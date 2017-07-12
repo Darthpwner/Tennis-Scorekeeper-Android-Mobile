@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="matthewallenlinsoftware.tennisscorekeeperapp.ScoreActivity"
+    android:background="#000000">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Set Score:"
+        android:id="@+id/set_score_text_view"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/player_1_set_1_text_view"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/set_score_text_view"
+        android:layout_toLeftOf="@+id/set_1_dash_text_view"
+        android:layout_toStartOf="@+id/set_1_dash_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/set_1_dash_text_view"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/set_score_text_view"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/player_2_set_1_text_view"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/set_score_text_view"
+        android:layout_toRightOf="@+id/set_1_dash_text_view"
+        android:layout_toEndOf="@+id/set_1_dash_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/player_1_set_2_text_view"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/player_1_set_1_text_view"
+        android:layout_alignLeft="@+id/player_1_set_1_text_view"
+        android:layout_alignStart="@+id/player_1_set_1_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/set_2_dash_text_view"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/player_1_set_2_text_view"
+        android:layout_alignLeft="@+id/set_1_dash_text_view"
+        android:layout_alignStart="@+id/set_1_dash_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/player_2_set_2_text_view"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/set_2_dash_text_view"
+        android:layout_toRightOf="@+id/set_2_dash_text_view"
+        android:layout_toEndOf="@+id/set_2_dash_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/player_1_set_3_text_view"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/player_1_set_2_text_view"
+        android:layout_alignLeft="@+id/player_1_set_2_text_view"
+        android:layout_alignStart="@+id/player_1_set_2_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/set_3_dash_text_view"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/player_1_set_3_text_view"
+        android:layout_alignLeft="@+id/set_2_dash_text_view"
+        android:layout_alignStart="@+id/set_2_dash_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/player_2_set_3_text_view"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/set_3_dash_text_view"
+        android:layout_toRightOf="@+id/set_3_dash_text_view"
+        android:layout_toEndOf="@+id/set_3_dash_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Game Score:"
+        android:id="@+id/game_score_text_view"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/player_1_game_score_text_view"
+        android:textSize="75sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/game_score_text_view"
+        android:layout_alignRight="@+id/player_1_set_3_text_view"
+        android:layout_alignEnd="@+id/player_1_set_3_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/game_score_dash_text_view"
+        android:textSize="75sp"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/player_1_game_score_text_view"
+        android:layout_toRightOf="@+id/player_1_game_score_text_view"
+        android:layout_toEndOf="@+id/player_1_game_score_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/player_2_game_score_text_view"
+        android:textSize="75sp"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/game_score_dash_text_view"
+        android:layout_toRightOf="@+id/game_score_dash_text_view"
+        android:layout_toEndOf="@+id/game_score_dash_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="P1"
+        android:id="@+id/player_1_text_view"
+        android:textColor="#ffffff"
+        android:textSize="60sp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/set_score_text_view"
+        android:layout_toStartOf="@+id/set_score_text_view"
+        android:layout_marginBottom="44dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="P2"
+        android:id="@+id/player_2_text_view"
+        android:textColor="#ffffff"
+        android:textSize="60sp"
+        android:layout_alignTop="@+id/player_1_text_view"
+        android:layout_toRightOf="@+id/game_score_text_view"
+        android:layout_toEndOf="@+id/game_score_text_view" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/player_1_serving_image_view"
+        android:src="@drawable/tennis_ball"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/game_score_text_view"
+        android:layout_toStartOf="@+id/player_1_game_score_text_view"
+        android:layout_marginTop="15dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/player_2_serving_image_view"
+        android:src="@drawable/tennis_ball"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/game_score_text_view"
+        android:layout_toEndOf="@+id/player_2_game_score_text_view"
+        android:layout_marginTop="15dp" />
+
+</RelativeLayout>
