@@ -213,6 +213,7 @@
         android:adjustViewBounds="true"
         android:layout_below="@+id/game_score_text_view"
         android:layout_toEndOf="@+id/player_2_game_score_text_view"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:visibility="invisible" />
 
 </RelativeLayout>
