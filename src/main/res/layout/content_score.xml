@@ -130,7 +130,10 @@
         android:textColor="#ffffff"
         android:textSize="30sp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:paddingTop="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
