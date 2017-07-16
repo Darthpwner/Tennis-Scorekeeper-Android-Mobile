@@ -190,8 +190,7 @@
         android:textColor="#ffffff"
         android:textSize="60sp"
         android:layout_alignTop="@+id/player_1_text_view"
-        android:layout_toRightOf="@+id/game_score_text_view"
-        android:layout_toEndOf="@+id/game_score_text_view" />
+        android:layout_toEndOf="@+id/set_score_text_view" />
 
     <ImageView
         android:layout_width="50dp"
