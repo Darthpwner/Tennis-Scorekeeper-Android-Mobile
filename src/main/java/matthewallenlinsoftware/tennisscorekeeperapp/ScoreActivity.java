@@ -3,6 +3,7 @@ package matthewallenlinsoftware.tennisscorekeeperapp;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -47,17 +48,22 @@ public class ScoreActivity extends AppCompatActivity {
                 .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
                         @Override
                         public void onConnected(Bundle connectionHint) {
+                            Log.d("TAG", "onConnected: " + connectionHint);
+                            // Now you can use the Data Layer API
                         }
                         @Override
                         public void onConnectionSuspended(int cause) {
+                            Log.d("TAG", "onConnectionSuspended: " + cause);
                         }
                     })
                     .addOnConnectionFailedListener(new GoogleApiClient.OnConnectionFailedListener() {
                         @Override
                         public void onConnectionFailed(ConnectionResult result) {
+                            Log.d("TAG", "onConnectionFailed: " + result);
                         }
                     })
-                    .addApi(Wearable.API)
+                    // Request access only to the Wearable API
+                .addApi(Wearable.API)
                     .build();
             mGoogleApiClient.connect();
 
