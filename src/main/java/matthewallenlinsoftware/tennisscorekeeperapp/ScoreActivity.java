@@ -82,12 +82,19 @@ public class ScoreActivity extends AppCompatActivity implements
                         @Override
                         public void onConnectionFailed(ConnectionResult result) {
                             Log.d("TAG", "onConnectionFailed: " + result);
+
+                            if (result.getErrorCode() == ConnectionResult.API_UNAVAILABLE) {
+                                // The Android Wear app is not installed
+                                System.out.println("The Android Wear app is not installed.");
+                            }
                         }
                     })
                     // Request access only to the Wearable API
                 .addApi(Wearable.API)
                     .build();
-            mGoogleApiClient.connect();
+//            mGoogleApiClient.connect();
+
+        System.out.println("Finished setting up mGoogleApiClient!");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -143,6 +150,8 @@ public class ScoreActivity extends AppCompatActivity implements
     protected void onStart() {
         super.onStart();
         mGoogleApiClient.connect();
+
+        System.out.println("onStart.");
     }
 
     @Override
@@ -150,6 +159,7 @@ public class ScoreActivity extends AppCompatActivity implements
         if (Log.isLoggable("TAG", Log.DEBUG)) {
             Log.d("TAG", "Connected to Google Api Service");
         }
+
         Wearable.DataApi.addListener(mGoogleApiClient, this);
     }
 
@@ -170,6 +180,11 @@ public class ScoreActivity extends AppCompatActivity implements
     @Override
     public void onConnectionFailed(ConnectionResult result) {
         System.out.println("result: " + result);
+
+        if (result.getErrorCode() == ConnectionResult.API_UNAVAILABLE) {
+            // The Android Wear app is not installed
+            System.out.println("The Android Wear app is not installed.");
+        }
     }
 
     @Override
