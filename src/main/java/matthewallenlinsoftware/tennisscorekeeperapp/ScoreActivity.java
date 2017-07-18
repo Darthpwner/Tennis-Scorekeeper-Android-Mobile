@@ -185,8 +185,6 @@ public class ScoreActivity extends AppCompatActivity implements
 
                     System.out.println("Data changed!");
 
-                    //asAS
-
                     //Update game score
                     player_1_game_score = dataMap.getInt("player_1_game_score_label");
                     player_2_game_score = dataMap.getInt("player_2_game_score_label");
@@ -231,7 +229,7 @@ public class ScoreActivity extends AppCompatActivity implements
                     }
 
                     // If best of 1 set, hide the other set labels
-                    if(match_length == "best_of_1") {
+                    if(match_length.equals("best_of_1")) {
                         player_1_set_2_text_view.setVisibility(View.INVISIBLE);
                         set_2_dash_text_view.setVisibility(View.INVISIBLE);
                         player_2_set_2_text_view.setVisibility(View.INVISIBLE);
