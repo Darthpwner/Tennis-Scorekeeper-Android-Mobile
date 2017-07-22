@@ -67,32 +67,11 @@ public class ScoreActivity extends AppCompatActivity implements
 
         // Set up Google Api client
         mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
-                        @Override
-                        public void onConnected(Bundle connectionHint) {
-                            Log.d("TAG", "onConnected: " + connectionHint);
-                            // Now you can use the Data Layer API
-                        }
-                        @Override
-                        public void onConnectionSuspended(int cause) {
-                            Log.d("TAG", "onConnectionSuspended: " + cause);
-                        }
-                    })
-                    .addOnConnectionFailedListener(new GoogleApiClient.OnConnectionFailedListener() {
-                        @Override
-                        public void onConnectionFailed(ConnectionResult result) {
-                            Log.d("TAG", "onConnectionFailed: " + result);
-
-                            if (result.getErrorCode() == ConnectionResult.API_UNAVAILABLE) {
-                                // The Android Wear app is not installed
-                                System.out.println("The Android Wear app is not installed.");
-                            }
-                        }
-                    })
-                    // Request access only to the Wearable API
                 .addApi(Wearable.API)
-                    .build();
-//            mGoogleApiClient.connect();
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .build();
+        mGoogleApiClient.connect();
 
         System.out.println("Finished setting up mGoogleApiClient!");
 
@@ -156,6 +135,8 @@ public class ScoreActivity extends AppCompatActivity implements
 
     @Override
     public void onConnected(Bundle connectionHint) {
+        System.out.println("onConnected connectionHint: " + connectionHint);
+
         if (Log.isLoggable("TAG", Log.DEBUG)) {
             Log.d("TAG", "Connected to Google Api Service");
         }
